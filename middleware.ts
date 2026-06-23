@@ -1,9 +1,7 @@
 import { NextResponse, type NextRequest } from "next/server";
 
-// Kept in sync with content/types.ts manually. Middleware runs on the Edge
-// Runtime, which Vercel's bundler can refuse to deploy if it pulls in
-// shared app modules (seen with "@/content/types" here) — so this file is
-// deliberately self-contained with zero "@/..." imports.
+// Kept in sync with content/types.ts manually rather than imported, to keep
+// this file dependency-free.
 const locales = ["en", "fa", "tr"] as const;
 const defaultLocale = "en";
 
@@ -30,4 +28,9 @@ export default function middleware(request: NextRequest) {
 
 export const config = {
   matcher: ["/((?!api|_next/static|_next/image|.*\\..*).*)"],
+  // Vercel's Edge Runtime threw a runtime ReferenceError (__dirname) when
+  // this deployed as an Edge Function. Node.js runtime has no such
+  // restriction and middleware logic here is trivial, so there's no
+  // latency trade-off worth chasing the edge-only bug for.
+  runtime: "nodejs",
 };
