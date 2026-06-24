@@ -289,12 +289,11 @@ export function Hero({ locale }: { locale: Locale }) {
     });
   }, [images, total, stage, size, rtl, parallax, scatterPositions]);
 
-  // The arc + headline finish settling by stage 3.4 (progress 0.85), leaving
-  // stage 3.4-4 (the last 15% of scroll through the hero) as a held "fully
-  // readable" moment — see the wheel-lock effect below, which pauses scroll
-  // for a beat right as this zone is entered, in either scroll direction.
-  const hintOpacity = mapRange(stage, 2.0, 2.2) * (1 - mapRange(stage, 2.3, 2.6));
-  const contentT = mapRange(stage, 2.8, 3.4);
+  // The text block stays fixed and fully visible the whole way through the
+  // hero — only the photos move (scatter -> line -> circle -> arc) around
+  // it. Only the small "scroll to explore" cue fades away once scrolling
+  // actually starts.
+  const scrollHintOpacity = 1 - mapRange(stage, 0, 0.4);
 
   return (
     <section ref={sectionRef} className="relative bg-ivory" style={{ height: reducedMotion ? "100vh" : "280vh" }}>
@@ -311,19 +310,9 @@ export function Hero({ locale }: { locale: Locale }) {
           ))}
         </div>
 
-        <div
-          className="pointer-events-none absolute inset-x-0 top-[14%] flex flex-col items-center px-6 text-center"
-          style={{ opacity: hintOpacity }}
-        >
+        <div className="pointer-events-none absolute inset-x-0 top-[8%] z-10 mx-auto flex max-w-[520px] flex-col items-center px-6 text-center sm:top-[10%]">
           <p className="text-xs font-medium uppercase tracking-[0.25em] text-gold-strong">{hero.eyebrow[locale]}</p>
-          <p className="mt-3 text-[11px] font-medium uppercase tracking-[0.2em] text-muted">{scrollHint[locale]}</p>
-        </div>
-
-        <div
-          className="pointer-events-none absolute inset-x-0 top-[8%] mx-auto flex max-w-[520px] flex-col items-center px-6 text-center sm:top-[10%]"
-          style={{ opacity: contentT, transform: `translateY(${lerp(16, 0, contentT)}px)` }}
-        >
-          <h1 className="text-balance font-body text-3xl font-medium leading-[1.15] text-charcoal sm:text-5xl">
+          <h1 className="mt-4 text-balance font-body text-3xl font-medium leading-[1.15] text-charcoal sm:text-5xl">
             <span className="block">
               <AccentLine text={hero.headline.line1[locale]} accent={hero.headline.accent1[locale]} />
             </span>
@@ -340,6 +329,12 @@ export function Hero({ locale }: { locale: Locale }) {
               {hero.ctaSecondary[locale]}
             </Button>
           </div>
+          <p
+            className="mt-8 text-[11px] font-medium uppercase tracking-[0.2em] text-muted"
+            style={{ opacity: scrollHintOpacity }}
+          >
+            {scrollHint[locale]}
+          </p>
         </div>
       </div>
     </section>
