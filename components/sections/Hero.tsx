@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import type { Locale } from "@/content/types";
-import { pages } from "@/content/site";
+import { brand, pages } from "@/content/site";
 import { Button } from "@/components/ui/Button";
 import { getWhatsAppLink } from "@/lib/whatsapp";
 
@@ -43,17 +43,25 @@ export function Hero({ locale }: { locale: Locale }) {
       <div className="absolute inset-0 bg-charcoal/35" aria-hidden="true" />
 
       <div className="relative z-10 mx-auto w-full max-w-6xl px-6 sm:px-8">
-        <div className="max-w-2xl">
-          <p className="mb-4 text-xs font-medium uppercase tracking-[0.25em] text-gold-soft">
+        <div className="mx-auto flex max-w-2xl flex-col items-center text-center">
+          <Image
+            src={brand.logo}
+            alt={brand.name}
+            width={985}
+            height={521}
+            priority
+            className="h-auto w-64 rounded-xl shadow-lg sm:w-80 md:w-96"
+          />
+          <p className="mt-8 text-xs font-medium uppercase tracking-[0.25em] text-gold-soft">
             {hero.eyebrow[locale]}
           </p>
-          <h1 className="text-balance font-heading text-4xl leading-tight text-ivory sm:text-5xl md:text-6xl">
+          <h1 className="mt-4 text-balance font-heading text-4xl leading-tight text-ivory sm:text-5xl md:text-6xl">
             {hero.headline[locale]}
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-ivory/90 sm:text-lg">
             {hero.subtitle[locale]}
           </p>
-          <div className="mt-10 flex flex-wrap gap-4">
+          <div className="mt-10 flex flex-wrap justify-center gap-4">
             <Button href={`/${locale}/gallery`} variant="inverse">
               {hero.ctaPrimary[locale]}
             </Button>

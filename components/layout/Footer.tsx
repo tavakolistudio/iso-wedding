@@ -14,7 +14,13 @@ export function Footer({ locale }: { locale: Locale }) {
     <footer className="border-t border-border bg-ivory-soft">
       <Container className="grid gap-12 py-16 sm:grid-cols-2 lg:grid-cols-4">
         <div className="lg:col-span-2">
-          <Image src={brand.logo} alt={brand.name} width={170} height={56} className="h-12 w-auto" />
+          <Image
+            src={brand.logo}
+            alt={brand.name}
+            width={985}
+            height={521}
+            className="h-12 w-auto rounded-md shadow-sm ring-1 ring-border"
+          />
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted">{footerContent.description[locale]}</p>
           <p className="mt-2 text-xs uppercase tracking-[0.2em] text-muted">{brand.parentBrand}</p>
         </div>

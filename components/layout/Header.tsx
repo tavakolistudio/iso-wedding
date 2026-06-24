@@ -37,10 +37,10 @@ export function Header({ locale }: { locale: Locale }) {
           <Image
             src={brand.logo}
             alt={brand.name}
-            width={170}
-            height={56}
+            width={985}
+            height={521}
             priority
-            className={`h-10 w-auto transition-all duration-300 sm:h-12 ${scrolled ? "" : "brightness-0 invert"}`}
+            className="h-10 w-auto rounded-md shadow-sm ring-1 ring-charcoal/5 transition-all duration-300 sm:h-12"
           />
         </Link>
 
