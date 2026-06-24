@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation";
 
 export default function LocationsRedirect() {
-  redirect("/en/locations");
+  redirect("/fa/locations");
 }
