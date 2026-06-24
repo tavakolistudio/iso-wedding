@@ -250,42 +250,67 @@ export function Hero({ locale }: { locale: Locale }) {
         opacity: 1,
       };
 
-      // Keep the whole arc — not just its topmost point — inside the
-      // viewport, below the fixed text block. The old radius formula only
-      // bounded the apex; the two outer cards (which dip lower, per the
-      // sine curve) could land far below the fold or under the text.
-      const spreadAngle = isMobile ? 110 : 140;
-      const halfSpreadRad = (spreadAngle / 2) * (Math.PI / 180);
-      const verticalDrop = 1 - Math.cos(halfSpreadRad); // outer cards' drop below the apex, as a multiple of radius
-      const horizontalSpan = 2 * Math.sin(halfSpreadRad); // full arc width, as a multiple of radius
-
-      const cardScale = isMobile ? 1.3 : 1.7;
-      const halfCardW = (CARD_WIDTH * cardScale) / 2;
-      const halfCardH = (CARD_HEIGHT * cardScale) / 2;
-
-      const arcApexY = h * (isMobile ? 0.48 : 0.52); // clears the text block above it
-      const maxRadiusForHeight = (h * 0.97 - halfCardH - arcApexY) / verticalDrop;
-      const maxRadiusForWidth = (w * 0.47 - halfCardW) / (horizontalSpan / 2);
-      const arcRadius = Math.max(60, Math.min(maxRadiusForHeight, maxRadiusForWidth));
-      const arcCenterY = arcApexY + arcRadius;
-      const startAngle = -90 - spreadAngle / 2;
-      const step = total > 1 ? spreadAngle / (total - 1) : 0;
+      // Settled shape: on mobile there isn't enough width for photos on
+      // both sides of the text, so they settle into a bottom arc below it.
+      // On wider screens the text is centered, so photos settle into a full
+      // ring around it instead — both sized to clear the text block, using
+      // the actual (smaller, centered-on-desktop) text footprint below.
       const idx = rtl ? total - 1 - i : i;
-      const arcAngle = startAngle + idx * step;
-      const arcRad = (arcAngle * Math.PI) / 180;
-      const arc: CardTarget = {
-        x: Math.cos(arcRad) * arcRadius + parallax,
-        y: Math.sin(arcRad) * arcRadius + arcCenterY,
-        rotation: arcAngle + 90,
-        scale: cardScale,
-        opacity: 1,
-      };
+      let settled: CardTarget;
+
+      if (isMobile) {
+        const spreadAngle = 110;
+        const halfSpreadRad = (spreadAngle / 2) * (Math.PI / 180);
+        const verticalDrop = 1 - Math.cos(halfSpreadRad);
+        const horizontalSpan = 2 * Math.sin(halfSpreadRad);
+        const cardScale = 1.3;
+        const halfCardW = (CARD_WIDTH * cardScale) / 2;
+        const halfCardH = (CARD_HEIGHT * cardScale) / 2;
+
+        const arcApexY = h * 0.48;
+        const maxRadiusForHeight = (h * 0.97 - halfCardH - arcApexY) / verticalDrop;
+        const maxRadiusForWidth = (w * 0.47 - halfCardW) / (horizontalSpan / 2);
+        const arcRadius = Math.max(60, Math.min(maxRadiusForHeight, maxRadiusForWidth));
+        const arcCenterY = arcApexY + arcRadius;
+        const startAngle = -90 - spreadAngle / 2;
+        const step = total > 1 ? spreadAngle / (total - 1) : 0;
+        const arcAngle = startAngle + idx * step;
+        const arcRad = (arcAngle * Math.PI) / 180;
+        settled = {
+          x: Math.cos(arcRad) * arcRadius + parallax,
+          y: Math.sin(arcRad) * arcRadius + arcCenterY,
+          rotation: arcAngle + 90,
+          scale: cardScale,
+          opacity: 1,
+        };
+      } else {
+        const cardScale = 1.3;
+        const halfCardW = (CARD_WIDTH * cardScale) / 2;
+        const halfCardH = (CARD_HEIGHT * cardScale) / 2;
+        // Half-extent of the centered text column (max-w-[360px] + headline/description/CTAs).
+        const textHalfW = 190;
+        const textHalfH = 150;
+        const clearance = Math.sqrt(textHalfW * textHalfW + textHalfH * textHalfH) + 20;
+
+        const maxRadiusForHeight = h * 0.47 - halfCardH;
+        const maxRadiusForWidth = w * 0.47 - halfCardW;
+        const ringRadius = Math.max(clearance, Math.min(maxRadiusForHeight, maxRadiusForWidth));
+        const ringAngle = (idx / total) * 360 * (rtl ? -1 : 1);
+        const ringRad = (ringAngle * Math.PI) / 180;
+        settled = {
+          x: Math.cos(ringRad) * ringRadius + parallax,
+          y: Math.sin(ringRad) * ringRadius,
+          rotation: ringAngle + 90,
+          scale: cardScale,
+          opacity: 1,
+        };
+      }
 
       if (stage <= 1) return lerpTarget(scatter, line, clamp01(stage));
       if (stage <= 2) return lerpTarget(line, circle, clamp01(stage - 1));
       if (stage <= 2.6) return circle;
-      if (stage <= 3.4) return lerpTarget(circle, arc, clamp01((stage - 2.6) / 0.8));
-      return arc;
+      if (stage <= 3.4) return lerpTarget(circle, settled, clamp01((stage - 2.6) / 0.8));
+      return settled;
     });
   }, [images, total, stage, size, rtl, parallax, scatterPositions]);
 
@@ -310,9 +335,9 @@ export function Hero({ locale }: { locale: Locale }) {
           ))}
         </div>
 
-        <div className="pointer-events-none absolute inset-x-0 top-[8%] z-10 mx-auto flex max-w-[520px] flex-col items-center px-6 text-center sm:top-[10%]">
-          <p className="text-xs font-medium uppercase tracking-[0.25em] text-gold-strong">{hero.eyebrow[locale]}</p>
-          <h1 className="mt-4 text-balance font-body text-3xl font-medium leading-[1.15] text-charcoal sm:text-5xl">
+        <div className="pointer-events-none absolute inset-x-0 top-[8%] z-10 mx-auto flex max-w-[380px] flex-col items-center px-6 text-center md:top-1/2 md:-translate-y-1/2">
+          <p className="text-[11px] font-medium uppercase tracking-[0.25em] text-gold-strong">{hero.eyebrow[locale]}</p>
+          <h1 className="mt-3 text-balance font-body text-xl font-medium leading-[1.15] text-charcoal sm:text-2xl">
             <span className="block">
               <AccentLine text={hero.headline.line1[locale]} accent={hero.headline.accent1[locale]} />
             </span>
@@ -320,17 +345,17 @@ export function Hero({ locale }: { locale: Locale }) {
               <AccentLine text={hero.headline.line2[locale]} accent={hero.headline.accent2[locale]} />
             </span>
           </h1>
-          <p className="mt-5 text-balance text-sm leading-relaxed text-muted sm:text-lg">{hero.description[locale]}</p>
-          <div className="pointer-events-auto mt-7 flex flex-wrap items-center justify-center gap-4">
-            <Button href={getWhatsAppLink()} external variant="primary">
+          <p className="mt-3 text-balance text-xs leading-relaxed text-muted sm:text-sm">{hero.description[locale]}</p>
+          <div className="pointer-events-auto mt-5 flex flex-wrap items-center justify-center gap-3">
+            <Button href={getWhatsAppLink()} external variant="primary" className="px-5 py-2 text-xs">
               {hero.ctaPrimary[locale]}
             </Button>
-            <Button href={`/${locale}/gallery`} variant="secondary">
+            <Button href={`/${locale}/gallery`} variant="secondary" className="px-5 py-2 text-xs">
               {hero.ctaSecondary[locale]}
             </Button>
           </div>
           <p
-            className="mt-8 text-[11px] font-medium uppercase tracking-[0.2em] text-muted"
+            className="mt-6 text-[10px] font-medium uppercase tracking-[0.2em] text-muted"
             style={{ opacity: scrollHintOpacity }}
           >
             {scrollHint[locale]}
