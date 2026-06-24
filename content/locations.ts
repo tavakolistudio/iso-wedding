@@ -1,7 +1,7 @@
 import type { LocationSpot } from "./types";
 
 /**
- * The 8 featured Istanbul shoot locations. Written for organic search
+ * The 9 featured Istanbul shoot locations. Written for organic search
  * relevance (Istanbul wedding photographer/videographer, pre-wedding &
  * couple photoshoot Istanbul) while staying editorial, not keyword-stuffed.
  */
@@ -216,6 +216,43 @@ export const locations: LocationSpot[] = [
       "/images/portfolio/portfolio-11.jpg",
       "/images/portfolio/portfolio-01.jpg",
       "/images/portfolio/portfolio-02.jpg",
+    ],
+  },
+  {
+    id: "grand-hotel-de-londres",
+    slug: "grand-hotel-de-londres",
+    name: {
+      en: "Grand Hotel de Londres",
+      fa: "گرند هتل دو لندر",
+      tr: "Grand Hotel de Londres",
+    },
+    description: {
+      en: "A 19th-century boutique hotel in Pera, Grand Hotel de Londres is loved by photographers for its faded grandeur — gilded mirrors, antique furniture, caged birds and candlelit staircases. Its bohemian, vintage interiors make it one of Istanbul's most cinematic indoor settings for wedding photography, in any season and regardless of weather.",
+      fa: "هتل بوتیک گرند هتل دو لندر، با قدمتی از قرن نوزدهم در محله پرا، در میان عکاسان به‌خاطر شکوه نوستالژیک خود شناخته شده است — آینه‌های طلاکوب، مبلمان عتیقه، قفس‌های پرنده و راه‌پله‌هایی در نور شمع. فضای داخلی بوهمیایی و وینتیج آن، این هتل را به یکی از سینمایی‌ترین لوکیشن‌های سرپوشیده استانبول برای عکاسی عروسی تبدیل کرده، در هر فصل و بدون نگرانی از آب‌وهوا.",
+      tr: "Pera'da 19. yüzyıldan kalma butik bir otel olan Grand Hotel de Londres (Büyük Londra Oteli), yaldızlı aynaları, antika mobilyaları, kuş kafesleri ve mum ışığıyla aydınlanan merdivenleriyle fotoğrafçılar arasında nostaljik zarafetiyle tanınır. Bohem ve vintage iç mekanları, onu İstanbul'un mevsimden ve hava koşulundan bağımsız en sinematik kapalı mekan düğün fotoğrafçılığı lokasyonlarından biri yapar.",
+    },
+    mood: {
+      en: "Antique, bohemian, unmistakably nostalgic.",
+      fa: "عتیقه‌ای، بوهمیایی و غرق در نوستالژی.",
+      tr: "Antika, bohem ve nostaljik bir zarafet.",
+    },
+    image: "/images/locations/grand-hotel-de-londres/grand-hotel-de-londres-01.jpg",
+    imageAlt: {
+      en: "Bride and groom on the antique staircase of Grand Hotel de Londres in Istanbul",
+      fa: "عروس و داماد روی راه‌پله عتیقه گرند هتل دو لندر در استانبول",
+      tr: "İstanbul'daki Grand Hotel de Londres'in antika merdivenlerinde gelin ve damat",
+    },
+    samplePhotos: [
+      "/images/locations/grand-hotel-de-londres/grand-hotel-de-londres-02.jpg",
+      "/images/locations/grand-hotel-de-londres/grand-hotel-de-londres-03.jpg",
+      "/images/locations/grand-hotel-de-londres/grand-hotel-de-londres-04.jpg",
+      "/images/locations/grand-hotel-de-londres/grand-hotel-de-londres-05.jpg",
+      "/images/locations/grand-hotel-de-londres/grand-hotel-de-londres-06.jpg",
+      "/images/locations/grand-hotel-de-londres/grand-hotel-de-londres-07.jpg",
+      "/images/locations/grand-hotel-de-londres/grand-hotel-de-londres-08.jpg",
+      "/images/locations/grand-hotel-de-londres/grand-hotel-de-londres-09.jpg",
+      "/images/locations/grand-hotel-de-londres/grand-hotel-de-londres-10.jpg",
+      "/images/locations/grand-hotel-de-londres/grand-hotel-de-londres-11.jpg",
     ],
   },
 ];
