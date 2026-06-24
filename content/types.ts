@@ -68,6 +68,8 @@ export interface LocationSpot {
   mood: LocalizedText;
   image: string;
   imageAlt: LocalizedText;
+  /** A few real bride & groom sample photos shown alongside this location. */
+  samplePhotos?: string[];
 }
 
 export interface NavItem {

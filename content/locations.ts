@@ -26,6 +26,11 @@ export const locations: LocationSpot[] = [
       fa: "برج گالاتا و کوچه‌های سنگ‌فرش اطراف آن در استانبول",
       tr: "Galata Kulesi ve çevresindeki taş döşeli sokaklar",
     },
+    samplePhotos: [
+      "/images/portfolio/portfolio-01.jpg",
+      "/images/portfolio/portfolio-02.jpg",
+      "/images/portfolio/portfolio-03.jpg",
+    ],
   },
   {
     id: "karakoy",
@@ -47,6 +52,11 @@ export const locations: LocationSpot[] = [
       fa: "محله ساحلی کاراکوی در استانبول هنگام غروب",
       tr: "Akşamüstü İstanbul Karaköy sahil semti",
     },
+    samplePhotos: [
+      "/images/portfolio/portfolio-04.jpg",
+      "/images/portfolio/portfolio-05.jpg",
+      "/images/portfolio/portfolio-06.jpg",
+    ],
   },
   {
     id: "bosphorus",
@@ -68,6 +78,11 @@ export const locations: LocationSpot[] = [
       fa: "نمای گسترده‌ای از بسفر در استانبول در ساعت طلایی",
       tr: "Gün batımında İstanbul Boğazı'nın geniş görünümü",
     },
+    samplePhotos: [
+      "/images/portfolio/portfolio-07.jpg",
+      "/images/portfolio/portfolio-08.jpg",
+      "/images/portfolio/portfolio-09.jpg",
+    ],
   },
   {
     id: "ortakoy",
@@ -89,6 +104,11 @@ export const locations: LocationSpot[] = [
       fa: "مسجد اورتاکوی با پل بسفر در پس‌زمینه",
       tr: "Arka planda Boğaz Köprüsü ile Ortaköy Camii",
     },
+    samplePhotos: [
+      "/images/portfolio/portfolio-10.jpg",
+      "/images/portfolio/portfolio-11.jpg",
+      "/images/portfolio/portfolio-01.jpg",
+    ],
   },
   {
     id: "balat",
@@ -110,6 +130,11 @@ export const locations: LocationSpot[] = [
       fa: "خانه‌های تاریخی رنگی در یک کوچه باریک در بالات، استانبول",
       tr: "Balat'ta dar bir sokakta renkli tarihi evler",
     },
+    samplePhotos: [
+      "/images/portfolio/portfolio-02.jpg",
+      "/images/portfolio/portfolio-03.jpg",
+      "/images/portfolio/portfolio-04.jpg",
+    ],
   },
   {
     id: "sultanahmet",
@@ -131,6 +156,11 @@ export const locations: LocationSpot[] = [
       fa: "گنبدها و مناره‌های خط آسمان سلطان‌احمد در استانبول",
       tr: "İstanbul Sultanahmet silüetindeki kubbeler ve minareler",
     },
+    samplePhotos: [
+      "/images/portfolio/portfolio-05.jpg",
+      "/images/portfolio/portfolio-06.jpg",
+      "/images/portfolio/portfolio-07.jpg",
+    ],
   },
   {
     id: "pierre-loti",
@@ -152,6 +182,11 @@ export const locations: LocationSpot[] = [
       fa: "چشم‌انداز پانورامای شاخ طلایی از تپه پیرلوتی هنگام غروب",
       tr: "Gün batımında Pierre Loti Tepesi'nden Haliç'in panoramik görünümü",
     },
+    samplePhotos: [
+      "/images/portfolio/portfolio-08.jpg",
+      "/images/portfolio/portfolio-09.jpg",
+      "/images/portfolio/portfolio-10.jpg",
+    ],
   },
   {
     id: "rooftop-luxury-yacht",
@@ -177,6 +212,11 @@ export const locations: LocationSpot[] = [
       fa: "تراس خصوصی روفتاپ با چشم‌اندازی به خط آسمان استانبول در شب",
       tr: "Gece İstanbul silüetine bakan özel çatı katı terası",
     },
+    samplePhotos: [
+      "/images/portfolio/portfolio-11.jpg",
+      "/images/portfolio/portfolio-01.jpg",
+      "/images/portfolio/portfolio-02.jpg",
+    ],
   },
 ];
 

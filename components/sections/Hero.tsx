@@ -1,9 +1,16 @@
+import Image from "next/image";
 import type { ReactNode } from "react";
 import type { Locale } from "@/content/types";
 import { pages } from "@/content/site";
 import { Button } from "@/components/ui/Button";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { getWhatsAppLink } from "@/lib/whatsapp";
+
+const heroPhotos = [
+  { src: "/images/portfolio/portfolio-09.jpg", rotate: "-rotate-6", size: "h-20 w-16 sm:h-24 sm:w-20" },
+  { src: "/images/portfolio/portfolio-10.jpg", rotate: "", size: "h-24 w-20 sm:h-28 sm:w-24" },
+  { src: "/images/portfolio/portfolio-07.jpg", rotate: "rotate-6", size: "h-20 w-16 sm:h-24 sm:w-20" },
+];
 
 function AccentLine({ text, accent }: { text: string; accent: string }): ReactNode {
   const index = text.indexOf(accent);
@@ -24,6 +31,17 @@ export function Hero({ locale }: { locale: Locale }) {
   return (
     <section className="bg-ivory pb-16 pt-14 sm:pb-24 sm:pt-20">
       <div className="mx-auto flex max-w-[520px] flex-col items-center px-6 text-center">
+        <FadeIn className="mb-7 flex items-end justify-center gap-2.5">
+          {heroPhotos.map((photo) => (
+            <div
+              key={photo.src}
+              className={`relative shrink-0 overflow-hidden rounded-xl shadow-md ring-4 ring-ivory ${photo.rotate} ${photo.size}`}
+            >
+              <Image src={photo.src} alt="" fill sizes="96px" className="object-cover" />
+            </div>
+          ))}
+        </FadeIn>
+
         <FadeIn>
           <p className="text-xs font-medium uppercase tracking-[0.25em] text-gold-strong">{hero.eyebrow[locale]}</p>
         </FadeIn>
