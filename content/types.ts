@@ -72,6 +72,8 @@ export interface LocationSpot {
   imageAlt: LocalizedText;
   /** A few real bride & groom sample photos shown alongside this location. */
   samplePhotos?: string[];
+  /** Specific named spots within this broader area worth shooting at, shown as a list on the detail page. */
+  photoSpots?: LocalizedList;
   /** Used by the "Plan Your Shoot" wizard (components/planner/*). */
   bestTime?: LocalizedText;
   crowdLevel?: CrowdLevel;

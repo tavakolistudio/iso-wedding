@@ -61,6 +61,21 @@ export default async function LocationDetailPage({
             <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted sm:text-lg">
               {location.description[locale]}
             </p>
+            {location.photoSpots ? (
+              <div className="mt-8 max-w-2xl">
+                <p className="text-xs font-medium uppercase tracking-[0.2em] text-gold-strong">
+                  {ui.photoSpotsHeading[locale]}
+                </p>
+                <ul className="mt-3 grid gap-2 sm:grid-cols-2">
+                  {location.photoSpots[locale].map((spot) => (
+                    <li key={spot} className="flex items-start gap-3 text-sm text-charcoal sm:text-base">
+                      <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-gold-strong" aria-hidden="true" />
+                      {spot}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ) : null}
           </FadeIn>
         </Container>
       </section>

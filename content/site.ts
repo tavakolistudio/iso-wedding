@@ -82,6 +82,11 @@ export const ui = {
   backToHome: { en: "Back to Home", fa: "بازگشت به خانه", tr: "Ana Sayfaya Dön" },
   backToLocations: { en: "Back to Locations", fa: "بازگشت به لوکیشن‌ها", tr: "Lokasyonlara Dön" },
   allLabel: { en: "All", fa: "همه", tr: "Tümü" },
+  photoSpotsHeading: {
+    en: "Photo Spots in This Area",
+    fa: "نقاط عکاسی در این منطقه",
+    tr: "Bu Bölgedeki Çekim Noktaları",
+  },
 };
 
 export const pages = {
