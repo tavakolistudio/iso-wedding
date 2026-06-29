@@ -235,7 +235,7 @@ export const locations: LocationSpot[] = [
       fa: "باشکوه، تاریخی و بی‌اشتباه استانبولی.",
       tr: "Anıtsal, tarihi ve tartışmasız İstanbul.",
     },
-    image: "/images/locations/location-sultanahmet.svg",
+    image: "/images/locations/sultanahmet/sultanahmet-01.jpg",
     imageAlt: {
       en: "Domes and minarets of the Sultanahmet skyline in Istanbul",
       fa: "گنبدها و مناره‌های خط آسمان سلطان‌احمد در استانبول",
@@ -253,6 +253,16 @@ export const locations: LocationSpot[] = [
       tr: "Zengin, asil tonlar — koyu bordo, altın, ivory. Kubbelerin sıcak taş rengiyle çarpışan tonlardan kaçının.",
     },
     estimatedDuration: { en: "2–3 hours", fa: "۲ تا ۳ ساعت", tr: "2–3 saat" },
+    samplePhotos: [
+      "/images/locations/sultanahmet/sultanahmet-02.jpg",
+      "/images/locations/sultanahmet/sultanahmet-03.jpg",
+      "/images/locations/sultanahmet/sultanahmet-04.jpg",
+      "/images/locations/sultanahmet/sultanahmet-05.jpg",
+      "/images/locations/sultanahmet/sultanahmet-06.jpg",
+      "/images/locations/sultanahmet/sultanahmet-07.jpg",
+      "/images/locations/sultanahmet/sultanahmet-08.jpg",
+      "/images/locations/sultanahmet/sultanahmet-09.jpg",
+    ],
   },
   {
     id: "pierre-loti",
