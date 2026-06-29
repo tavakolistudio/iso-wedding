@@ -1,7 +1,7 @@
 import type { LocationSpot } from "./types";
 
 /**
- * The 10 featured Istanbul shoot locations. Written for organic search
+ * The 11 featured Istanbul shoot locations. Written for organic search
  * relevance (Istanbul wedding photographer/videographer, pre-wedding &
  * couple photoshoot Istanbul) while staying editorial, not keyword-stuffed.
  */
@@ -410,6 +410,48 @@ export const locations: LocationSpot[] = [
       "/images/locations/galata-bridge/galata-bridge-15.jpg",
       "/images/locations/galata-bridge/galata-bridge-16.jpg",
       "/images/locations/galata-bridge/galata-bridge-17.jpg",
+    ],
+  },
+  {
+    id: "kucuksu-palace",
+    slug: "kucuksu-palace",
+    name: {
+      en: "Küçüksu Palace",
+      fa: "کاخ کوچوکسو",
+      tr: "Küçüksu Kasrı",
+    },
+    description: {
+      en: "A small, ornate Ottoman summer palace right on the Bosphorus shore in Beykoz, Küçüksu Kasrı pairs Baroque marble façades and columned waterside balconies with sweeping views of the strait and its bridge — a setting that feels like a private palace rather than a public landmark.",
+      fa: "کاخ کوچوکسو، یک کاخ تابستانی عثمانی کوچک و پرتجمل، دقیقاً بر کنار بسفر در بی‌کوز قرار دارد و نمای باروک مرمرین و بالکن‌های ستون‌دار کنار آب را با چشم‌اندازی گسترده به بسفر و پل آن ترکیب می‌کند — فضایی که بیشتر شبیه یک کاخ خصوصی است تا یک بنای تاریخی عمومی.",
+      tr: "Beykoz'da Boğaz kıyısında küçük ve gösterişli bir Osmanlı yazlık kasrı olan Küçüksu Kasrı, barok mermer cepheleri ve sütunlu sahil balkonlarını Boğaz'a ve köprüsüne açılan geniş manzaralarla birleştirir — kamusal bir anıttan çok özel bir saray hissi veren bir mekan.",
+    },
+    mood: {
+      en: "Opulent, palatial, intimately grand.",
+      fa: "پرتجمل، کاخ‌گونه و باشکوه به‌شکلی خصوصی.",
+      tr: "Gösterişli, saraysı ve samimi biçimde anıtsal.",
+    },
+    image: "/images/locations/kucuksu-palace/kucuksu-palace-01.jpg",
+    imageAlt: {
+      en: "Bride and groom on the marble balcony of Küçüksu Palace overlooking the Bosphorus",
+      fa: "عروس و داماد روی بالکن مرمرین کاخ کوچوکسو با چشم‌اندازی به بسفر",
+      tr: "Boğaz manzaralı Küçüksu Kasrı'nın mermer balkonunda gelin ve damat",
+    },
+    bestTime: {
+      en: "Morning to early afternoon (soft light on the water)",
+      fa: "صبح تا اوایل بعدازظهر (نور ملایم روی آب)",
+      tr: "Sabahtan öğleden sonraya (suyun üzerinde yumuşak ışık)",
+    },
+    crowdLevel: "low",
+    outfitSuggestion: {
+      en: "Ivory, champagne and soft pastels complement the marble and Baroque detail beautifully. Tuxedos in ivory or black both work.",
+      fa: "ایوری، شامپاینی و پاستلی‌های ملایم به‌خوبی با مرمر و جزئیات باروک هماهنگ‌اند. کت‌وشلوار ایوری یا مشکی هر دو مناسب‌اند.",
+      tr: "Ivory, şampanya ve yumuşak pastel tonlar mermer ve barok detaylarla mükemmel uyum sağlar. Ivory ya da siyah smokin ikisi de uyumludur.",
+    },
+    estimatedDuration: { en: "1.5–2.5 hours", fa: "۱.۵ تا ۲.۵ ساعت", tr: "1,5–2,5 saat" },
+    samplePhotos: [
+      "/images/locations/kucuksu-palace/kucuksu-palace-02.jpg",
+      "/images/locations/kucuksu-palace/kucuksu-palace-03.jpg",
+      "/images/locations/kucuksu-palace/kucuksu-palace-04.jpg",
     ],
   },
 ];
