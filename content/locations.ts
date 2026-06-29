@@ -197,7 +197,7 @@ export const locations: LocationSpot[] = [
       fa: "رنگارنگ، نوستالژیک و پر از شخصیت.",
       tr: "Renkli, nostaljik ve karakter dolu.",
     },
-    image: "/images/locations/location-balat.svg",
+    image: "/images/locations/balat/balat-01.jpg",
     imageAlt: {
       en: "Colorful historic houses lining a narrow street in Balat, Istanbul",
       fa: "خانه‌های تاریخی رنگی در یک کوچه باریک در بالات، استانبول",
@@ -211,6 +211,15 @@ export const locations: LocationSpot[] = [
       tr: "Cesur renkler: kırmızı, sarı, kobalt mavi. Desenler burada iyi çalışır.",
     },
     estimatedDuration: { en: "2–3 hours", fa: "۲ تا ۳ ساعت", tr: "2–3 saat" },
+    samplePhotos: [
+      "/images/locations/balat/balat-02.jpg",
+      "/images/locations/balat/balat-03.jpg",
+      "/images/locations/balat/balat-04.jpg",
+      "/images/locations/balat/balat-05.jpg",
+      "/images/locations/balat/balat-06.jpg",
+      "/images/locations/balat/balat-07.jpg",
+      "/images/locations/balat/balat-08.jpg",
+    ],
   },
   {
     id: "sultanahmet",
