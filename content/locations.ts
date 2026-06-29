@@ -124,7 +124,7 @@ export const locations: LocationSpot[] = [
       fa: "گسترده، طلایی و بی‌زمان.",
       tr: "Geniş, altın rengi ve zamansız.",
     },
-    image: "/images/locations/location-bosphorus.svg",
+    image: "/images/locations/bosphorus/bosphorus-01.jpg",
     imageAlt: {
       en: "Wide view of the Bosphorus strait in Istanbul at golden hour",
       fa: "نمای گسترده‌ای از بسفر در استانبول در ساعت طلایی",
@@ -142,6 +142,13 @@ export const locations: LocationSpot[] = [
       tr: "Beyaz, lacivert, yumuşak mavi, kum beji. Koyu ve ağır renklerden kaçının.",
     },
     estimatedDuration: { en: "2–4 hours", fa: "۲ تا ۴ ساعت", tr: "2–4 saat" },
+    samplePhotos: [
+      "/images/locations/bosphorus/bosphorus-02.jpg",
+      "/images/locations/bosphorus/bosphorus-03.jpg",
+      "/images/locations/bosphorus/bosphorus-04.jpg",
+      "/images/locations/bosphorus/bosphorus-05.jpg",
+      "/images/locations/bosphorus/bosphorus-06.jpg",
+    ],
   },
   {
     id: "ortakoy",
