@@ -140,83 +140,67 @@ export const pages = {
     marquee: {
       images: [
         {
-          src: "/images/portfolio/portfolio-01.jpg",
+          src: "/images/locations/balat/balat-03.jpg",
           alt: {
-            en: "Bride and groom on a grand staircase in Istanbul",
-            fa: "عروس و داماد روی پله‌های بزرگ در استانبول",
-            tr: "İstanbul'da büyük bir merdivende gelin ve damat",
+            en: "Wedding couple in the colorful streets of Balat, Istanbul",
+            fa: "زوج عروسی در کوچه‌های رنگارنگ بالات استانبول",
+            tr: "Balat'ın renkli sokaklarında düğün çifti",
           },
         },
         {
-          src: "/images/portfolio/portfolio-02.jpg",
+          src: "/images/locations/sultanahmet/sultanahmet-04.jpg",
           alt: {
-            en: "Intimate wedding portrait by candlelight in Istanbul",
-            fa: "پرتره صمیمی عروسی در نور شمع در استانبول",
-            tr: "İstanbul'da mum ışığında samimi bir düğün portresi",
+            en: "Bride and groom near the Blue Mosque in Sultanahmet",
+            fa: "عروس و داماد در کنار مسجد آبی سلطان‌احمت",
+            tr: "Sultanahmet'te Mavi Cami yakınında gelin ve damat",
           },
         },
         {
-          src: "/images/portfolio/portfolio-03.jpg",
+          src: "/images/locations/ortakoy/ortakoy-03.jpg",
           alt: {
-            en: "Bride and groom sharing a quiet moment on the stairs",
-            fa: "لحظه‌ای آرام میان عروس و داماد روی پله‌ها",
-            tr: "Merdivenlerde sakin bir an paylaşan gelin ve damat",
+            en: "Wedding portrait by the Bosphorus Bridge at Ortaköy",
+            fa: "پرتره عروسی در کنار پل بسفر در ارتاکوی",
+            tr: "Ortaköy'de Boğaz Köprüsü yanında düğün portresi",
           },
         },
         {
-          src: "/images/portfolio/portfolio-04.jpg",
+          src: "/images/locations/galata/galata-04.jpg",
           alt: {
-            en: "Wedding couple portrait among vintage Istanbul interiors",
-            fa: "پرتره زوج عروسی در فضای دکوراسیون کلاسیک استانبول",
-            tr: "İstanbul'un vintage iç mekanlarında düğün çifti portresi",
+            en: "Bride and groom in the Galata tower district",
+            fa: "عروس و داماد در محله برج گالاتا",
+            tr: "Galata Kulesi çevresinde gelin ve damat",
           },
         },
         {
-          src: "/images/portfolio/portfolio-05.jpg",
+          src: "/images/locations/bosphorus/bosphorus-03.jpg",
           alt: {
-            en: "Bride holding a bouquet in a historic Istanbul hall",
-            fa: "عروس با دسته‌گل در سالنی تاریخی در استانبول",
-            tr: "İstanbul'da tarihi bir salonda buket tutan gelin",
+            en: "Wedding couple with the Bosphorus shoreline at golden hour",
+            fa: "زوج عروسی در کنار ساحل بسفر در طلوع طلایی",
+            tr: "Altın saat ışığında Boğaz kıyısında düğün çifti",
           },
         },
         {
-          src: "/images/portfolio/portfolio-06.jpg",
+          src: "/images/locations/grand-hotel-de-londres/grand-hotel-de-londres-05.jpg",
           alt: {
-            en: "Bride and groom by an arched window in Istanbul",
-            fa: "عروس و داماد کنار پنجره‌ای قدیمی در استانبول",
-            tr: "İstanbul'da kemerli bir pencere kenarında gelin ve damat",
+            en: "Elegant wedding portrait inside Grand Hotel de Londres",
+            fa: "پرتره باشکوه عروسی در داخل گرند هتل دو لندر",
+            tr: "Grand Hotel de Londres içinde zarif düğün portresi",
           },
         },
         {
-          src: "/images/portfolio/portfolio-07.jpg",
+          src: "/images/locations/pierre-loti/pierre-loti-04.jpg",
           alt: {
-            en: "Wedding portrait beneath a crystal chandelier in Istanbul",
-            fa: "پرتره عروسی زیر لوستر کریستالی در استانبول",
-            tr: "İstanbul'da kristal avize altında düğün portresi",
+            en: "Bride and groom at Pierre Loti Hill overlooking the Golden Horn",
+            fa: "عروس و داماد در تپه پیر لوتی با چشم‌انداز شاخ طلایی",
+            tr: "Pierre Loti Tepesi'nde Haliç manzaralı gelin ve damat",
           },
         },
         {
-          src: "/images/portfolio/portfolio-08.jpg",
+          src: "/images/locations/galata-bridge/galata-bridge-08.jpg",
           alt: {
-            en: "Bride and groom in a vintage Istanbul lounge",
-            fa: "عروس و داماد در سالن کلاسیک استانبول",
-            tr: "İstanbul'da vintage bir salonda gelin ve damat",
-          },
-        },
-        {
-          src: "/images/portfolio/portfolio-09.jpg",
-          alt: {
-            en: "Wedding couple reflected in a gilded mirror in Istanbul",
-            fa: "زوج عروسی در آینه‌ای طلایی در استانبول",
-            tr: "İstanbul'da yaldızlı bir aynada yansıyan düğün çifti",
-          },
-        },
-        {
-          src: "/images/portfolio/portfolio-10.jpg",
-          alt: {
-            en: "Bride and groom framed through a glass door in Istanbul",
-            fa: "عروس و داماد در قاب دری شیشه‌ای در استانبول",
-            tr: "İstanbul'da bir cam kapı çerçevesinde gelin ve damat",
+            en: "Wedding couple on Galata Bridge with Istanbul skyline",
+            fa: "زوج عروسی روی پل گالاتا با خط آسمان استانبول",
+            tr: "Galata Köprüsü'nde İstanbul silueti eşliğinde düğün çifti",
           },
         },
         {
@@ -228,19 +212,35 @@ export const pages = {
           },
         },
         {
-          src: "/images/locations/rooftop-luxury-yacht/rooftop-luxury-yacht-04.jpg",
+          src: "/images/locations/kucuksu-palace/kucuksu-palace-02.jpg",
           alt: {
-            en: "Bride and groom aboard a private yacht on the Bosphorus at sunset",
-            fa: "عروس و داماد روی قایق اختصاصی در بسفر هنگام غروب",
-            tr: "Gün batımında Boğaz'da özel bir yatta gelin ve damat",
+            en: "Wedding portrait in the gardens of Küçüksu Palace",
+            fa: "پرتره عروسی در باغ‌های کاخ کوچوک‌سو",
+            tr: "Küçüksu Kasrı bahçelerinde düğün portresi",
           },
         },
         {
-          src: "/images/locations/rooftop-luxury-yacht/rooftop-luxury-yacht-06.jpg",
+          src: "/images/locations/karakoy/karakoy-02.jpg",
           alt: {
-            en: "Bride in a luxury hotel suite overlooking the Bosphorus",
-            fa: "عروس در سوییت لوکس هتل با چشم‌اندازی به بسفر",
-            tr: "Boğaz manzaralı lüks bir otel süitinde gelin",
+            en: "Couple portrait in the modern streets of Karaköy",
+            fa: "پرتره زوج در خیابان‌های مدرن کاراکوی",
+            tr: "Karaköy'ün modern sokaklarında çift portresi",
+          },
+        },
+        {
+          src: "/images/locations/balat/balat-06.jpg",
+          alt: {
+            en: "Bride posing in a vibrant Balat alleyway",
+            fa: "عروس در کوچه‌ای پرنقش و نگار بالات",
+            tr: "Balat'ta canlı bir dar sokakta poz veren gelin",
+          },
+        },
+        {
+          src: "/images/locations/ortakoy/ortakoy-07.jpg",
+          alt: {
+            en: "Romantic sunset shot at Ortaköy waterfront",
+            fa: "عکس رمانتیک غروب آفتاب در کنار دریا در ارتاکوی",
+            tr: "Ortaköy sahilinde romantik gün batımı çekimi",
           },
         },
       ],
